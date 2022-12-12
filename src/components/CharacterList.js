@@ -1,7 +1,13 @@
- const CharacterList = () => {
+import CharacterCard from "./CharacterCard";
+
+ const CharacterList = ({characters}) => {    
+    
+ const characterElement = characters.map ((character) => {    //destructuring
+     return <CharacterCard  character={character}/>});
+
     return(
         <section>
-            <ul></ul>
+            <ul>{characterElement}</ul>
         </section>
     );
  };

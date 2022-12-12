@@ -30,7 +30,7 @@ const [characterData, setCharacterData] = useState()
     <h1>Rick and Morty</h1>
    </header>
    <main>
-    <CharacterList />
+    <CharacterList  characters={characterData}/>
 
    </main>
 
