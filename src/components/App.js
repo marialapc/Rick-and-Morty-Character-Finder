@@ -1,5 +1,7 @@
 
+import { useEffect } from "react";
 import "../styles/App.scss";
+import getDataFromApi from "../services/api";
 
 
 function App() {
@@ -8,6 +10,11 @@ function App() {
 
   // useEffect
 
+  useEffect(() => {
+ getDataFromApi().then((data) => {
+  console.log(data);
+ });
+  },[])
 
  
   // Funciones handler
