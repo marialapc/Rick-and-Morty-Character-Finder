@@ -3,6 +3,7 @@ const CharacterCard = (props) => {
     return (
     
     <li>
+        <a href={props.character.id}></a>
      <img
       src={props.character.image}
       alt={`Imagen de ${props.character.name}`}
