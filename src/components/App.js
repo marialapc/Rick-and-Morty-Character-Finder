@@ -7,7 +7,7 @@ import CharacterList from "./CharacterList";
 
 function App() {
   // variables estado
-const [characterData, setCharacterData] = useState()
+const [characterData, setCharacterData] = useState([])
 
   // useEffect
 
@@ -30,12 +30,14 @@ const [characterData, setCharacterData] = useState()
     <h1>Rick and Morty</h1>
    </header>
    <main>
-    <CharacterList  characters={characterData}/>
+    <CharacterList  characters={characterData} />
+   
 
    </main>
 
   </>
   );
+
 }
 
 export default App;
