@@ -1,18 +1,19 @@
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import "../styles/App.scss";
 import getDataFromApi from "../services/api";
+import CharacterList from "./CharacterList";
 
 
 function App() {
   // variables estado
-
+const [characterData, setCharacterData] = useState()
 
   // useEffect
 
   useEffect(() => {
  getDataFromApi().then((data) => {
-  console.log(data);
+  setCharacterData(data);
  });
   },[])
 
@@ -25,7 +26,13 @@ function App() {
 
   return(
    <>
- <h1>hi world</h1>
+   <header>
+    <h1>Rick and Morty</h1>
+   </header>
+   <main>
+    <CharacterList />
+
+   </main>
 
   </>
   );
