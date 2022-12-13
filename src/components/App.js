@@ -6,7 +6,7 @@ import CharacterList from "./CharacterList";
 import Filters from "./Filters";
 import CharacterDetail from "./CharacterDetail";
 import ls from "../services/localStorage";
-
+import logo from"../images/logo.png";
 
 function App() {
   // variables estado
@@ -45,10 +45,10 @@ function App() {
 
   return (
     <>
-      <header>
-        <h1>Rick and Morty</h1>
+      <header className="header">
+        <img src={logo} alt="logo" title="logo" className="header__logo"></img>
       </header>
-      <main>
+      <main className="main">
         <Routes>
           <Route path="/" element={
             <>
