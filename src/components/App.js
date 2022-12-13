@@ -22,16 +22,12 @@ const [filterByName, setFilterByName] = useState('');
  
   // Funciones handler
 
-  const handleSubmit = (ev) => {
-    ev.preventDefault();
-  };
 
-const handleFilterName = (event) =>{
- 
-setFilterByName(event.target.value);
-};
+  const handleFilterName = (value) =>{
+  setFilterByName(value);
+  }
 
-
+  const filteredCharacters = characterData.filter((character) => character.name.includes(filterByName));
 
   // funciones render
 
@@ -43,20 +39,8 @@ setFilterByName(event.target.value);
     <h1>Rick and Morty</h1>
    </header>
    <main>
-    {/* <Filters handleFilterName={handleFilterName} filterByName={filterByName}/> */}
-    <form onSubmit={handleSubmit}> 
-     <input
-   onInput={handleFilterName}
-   value={filterByName}
-  type="text"
-   name="name"
-   id="name"
-    placeholder="Ej: Rick"
-    ></input>
-   </form>
-    <CharacterList  characters={characterData} />
-   
-
+    <Filters filterByName={filterByName} handleFilterName={handleFilterName} />
+    <CharacterList  characters={filteredCharacters}/>
    </main>
 
   </>

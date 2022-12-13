@@ -5,6 +5,7 @@ const characterElement = characters.map((character) => {
 return <CharacterCard  character={character}/>;
  });
  
+ 
    
      return(
        <section>

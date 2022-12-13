@@ -1,6 +1,15 @@
-// import FilterByName from "./FilterByName";
+import FilterByName from "./FilterByName";
 
-// const Filters = (props) =>{
-// return <FilterByName handleFilterName={props.handleFilterName} filterByName={props.filterByName}/>
-// };
-//  export default Filters;
+const Filters = (props) =>{
+
+    const handleSubmit = (ev) =>{
+        ev.preventDefault();
+    };
+
+return (
+<form onSubmit={handleSubmit}> 
+<FilterByName FilterByName={props.FilterByName} handleFilterName={props.handleFilterName} />
+</form>
+);
+};
+ export default Filters;
