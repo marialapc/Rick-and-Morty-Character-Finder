@@ -20,14 +20,11 @@ function App() {
     });
   }, []);
 
-  useEffect(() => {
-  ls.set('filterByName', filterByName)
-  }, [filterByName])
-
   // Funciones handler
 
   const handleFilterName = (value) => {
     setFilterByName(value);
+    ls.set('filterByName', value)
   };
 
   // funciones render
