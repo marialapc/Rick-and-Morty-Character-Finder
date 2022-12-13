@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 
 const CharacterDetail = (props) =>{
-    const params =useParams();
+    const params = useParams();
     const character = props.characterFound(params.characterId);
     return(
         <article>
@@ -13,6 +13,9 @@ const CharacterDetail = (props) =>{
       />
       <h4>{character.name}</h4>
       <p>{character.species}</p>
+      <p>{character.planet}</p>
+      <p>{character.episodes}</p>
+      <p>{character.status}</p>
       <Link to ={"/"}> Volver </Link>
         </article>
     )
