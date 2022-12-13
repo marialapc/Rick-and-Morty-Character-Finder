@@ -5,12 +5,13 @@ import getDataFromApi from "../services/api";
 import CharacterList from "./CharacterList";
 import Filters from "./Filters";
 import CharacterDetail from "./CharacterDetail";
-import ls from"../services/localStorage";
+import ls from "../services/localStorage";
+
 
 function App() {
   // variables estado
   const [characterData, setCharacterData] = useState([]);
-  const [filterByName, setFilterByName] = useState(ls.get('filterByName',''));
+  const [filterByName, setFilterByName] = useState(ls.get('filterByName'), '');
 
   // useEffect
 
