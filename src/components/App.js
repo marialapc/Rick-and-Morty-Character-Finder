@@ -32,12 +32,9 @@ function App() {
   );
 
 
-   const {pathname} = useLocation();
-   const dataUrl = matchPath("/character/:characterId", pathname);
-   const characterId = dataUrl !== null ? dataUrl.params.characterId : null;
-   
-   const characterFound = characterData.find((character) => character.id === characterId)
-   
+   const characterFound = (id) => {
+    return characterData.find((character) => character.id === parseInt(id));
+   };
   
 
   //return
@@ -57,7 +54,8 @@ function App() {
           }>
          </Route>
          
-         <Route path="/character/:characterId" element={<CharacterDetail character={characterFound}/>}/>
+         <Route path="/character/:characterId" element={
+         <CharacterDetail characterFound={characterFound}/>}/>
         </Routes>
       </main>
     </>

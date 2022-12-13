@@ -1,16 +1,18 @@
 import { Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 const CharacterDetail = (props) =>{
-    console.log(props)
+    const params =useParams();
+    const character = props.characterFound(params.characterId);
     return(
         <article>
             <img
-        src={props.characterFound.image}
-        alt={`Imagen de ${props.characterFound.name}`}
-        title={`Imagen de ${props.characterFound.name}`}
+        src={character.image}
+        alt={`Imagen de ${character.name}`}
+        title={`Imagen de ${character.name}`}
       />
-      <h4>{props.character.name}</h4>
-      <p>{props.character.species}</p>
+      <h4>{character.name}</h4>
+      <p>{character.species}</p>
       <Link to ={"/"}> Volver </Link>
         </article>
     )
