@@ -33,6 +33,7 @@ function App() {
 
 
    const characterFound = (id) => {
+  
     return characterData.find((character) => character.id === parseInt(id));
    };
   
@@ -49,7 +50,7 @@ function App() {
           <Route path="/" element={
             <>
              <Filters filterByName={filterByName} handleFilterName={handleFilterName} />
-             <CharacterList characters={filteredCharacters} />
+             <CharacterList characters={filteredCharacters} filterByName={filterByName}  />
             </>
           }>
          </Route>

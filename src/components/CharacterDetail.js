@@ -12,10 +12,11 @@ const CharacterDetail = (props) =>{
         title={`Imagen de ${character.name}`}
       />
       <h4>{character.name}</h4>
-      <p>{character.species}</p>
-      <p>{character.planet}</p>
-      <p>{character.episodes}</p>
-      <p>{character.status}</p>
+      <p>Status: {character.status}</p>
+      <p> Species: {character.species}</p>
+      <p> Origin: {character.planet}</p>
+      <p> Episodes: {character.episodes.length}</p>
+     
       <Link to ={"/"}> Volver </Link>
         </article>
     )
