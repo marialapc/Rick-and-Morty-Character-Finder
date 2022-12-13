@@ -1,5 +1,6 @@
-const Filters = () =>{
-return 
+// import FilterByName from "./FilterByName";
 
-};
- export default Filters;
+// const Filters = (props) =>{
+// return <FilterByName handleFilterName={props.handleFilterName} filterByName={props.filterByName}/>
+// };
+//  export default Filters;

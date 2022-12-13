@@ -17,13 +17,22 @@ const [filterByName, setFilterByName] = useState('');
  getDataFromApi().then((data) => {
   setCharacterData(data);
  });
-  },[])
+  },[]);
 
  
   // Funciones handler
-const handlerFilterName = (value) =>{
-setFilterByName(value)
+
+  const handleSubmit = (ev) => {
+    ev.preventDefault();
+  };
+
+const handleFilterName = (event) =>{
+ 
+setFilterByName(event.target.value);
 };
+
+
+
   // funciones render
 
   //return
@@ -34,7 +43,17 @@ setFilterByName(value)
     <h1>Rick and Morty</h1>
    </header>
    <main>
-    <Filters handlerFilterName={handlerFilterName}/>
+    {/* <Filters handleFilterName={handleFilterName} filterByName={filterByName}/> */}
+    <form onSubmit={handleSubmit}> 
+     <input
+   onInput={handleFilterName}
+   value={filterByName}
+  type="text"
+   name="name"
+   id="name"
+    placeholder="Ej: Rick"
+    ></input>
+   </form>
     <CharacterList  characters={characterData} />
    
 
