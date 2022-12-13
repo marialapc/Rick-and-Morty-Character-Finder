@@ -1,17 +1,17 @@
-const FilterByName = (props) =>{
+const FilterByName = (props) => {
+  const handleInput = (ev) => {
+    props.handleFilterName(ev.target.value);
+  };
 
-    const handleInput = (ev) =>{
-        props.handleFilterName(ev.target.value);
-    };
-
-    return (
+  return (
     <input
-    onInput={handleInput}
-    value={props.filterByName}
-    type="text"
-    name="name"
-    id="name"
-    placeholder="Ej: Rick"
-    ></input> 
-   ) };
-     export default FilterByName;
+      onInput={handleInput}
+      value={props.filterByName}
+      type="text"
+      name="name"
+      id="name"
+      placeholder="Ej: Rick"
+    ></input>
+  );
+};
+export default FilterByName;
