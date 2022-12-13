@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import {Link, Route, Routes} from 'react-router-dom';
 import "../styles/App.scss";
 import getDataFromApi from "../services/api";
 import CharacterList from "./CharacterList";
@@ -26,8 +27,9 @@ function App() {
   // funciones render
 
   const filteredCharacters = characterData.filter((character) =>
-    character.name. toLowerCase().includes(filterByName.toLowerCase())
+    character.name.toLowerCase().includes(filterByName.toLowerCase())
   );
+
   //return
 
   return (
@@ -36,11 +38,15 @@ function App() {
         <h1>Rick and Morty</h1>
       </header>
       <main>
-        <Filters
-          filterByName={filterByName}
-          handleFilterName={handleFilterName}
-        />
-        <CharacterList characters={filteredCharacters} />
+        <Routes>
+          <Route path="/" element={
+            <>
+             <Filters filterByName={filterByName} handleFilterName={handleFilterName} />
+             <CharacterList characters={filteredCharacters} />
+            </>
+          }>
+         </Route>
+        </Routes>
       </main>
     </>
   );
