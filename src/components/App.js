@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
-import {Route, Routes , matchPath, useLocation} from 'react-router-dom';
+import {Route, Routes} from 'react-router-dom';
 import "../styles/App.scss";
 import getDataFromApi from "../services/api";
 import CharacterList from "./CharacterList";
 import Filters from "./Filters";
 import CharacterDetail from "./CharacterDetail";
+import ls from"../services/localStorage";
 
 function App() {
   // variables estado
@@ -18,6 +19,10 @@ function App() {
       setCharacterData(data);
     });
   }, []);
+
+  useEffect(() => {
+ls.set('filterByName', filterByName)
+  })
 
   // Funciones handler
 
