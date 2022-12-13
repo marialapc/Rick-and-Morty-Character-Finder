@@ -10,7 +10,7 @@ import ls from"../services/localStorage";
 function App() {
   // variables estado
   const [characterData, setCharacterData] = useState([]);
-  const [filterByName, setFilterByName] = useState("");
+  const [filterByName, setFilterByName] = useState(ls.get('filterByName',''));
 
   // useEffect
 
@@ -21,8 +21,8 @@ function App() {
   }, []);
 
   useEffect(() => {
-ls.set('filterByName', filterByName)
-  })
+  ls.set('filterByName', filterByName)
+  }, [filterByName])
 
   // Funciones handler
 

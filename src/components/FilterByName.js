@@ -1,6 +1,7 @@
 const FilterByName = (props) => {
   const handleInput = (ev) => {
     props.handleFilterName(ev.target.value);
+  
   };
 
   return (
