@@ -6,9 +6,9 @@ const FilterBySpecies =  (props) => {
 return(
     <>
 <label htmlFor="Human">Human</label>
-<input type="radio" value="Human" name="Species" id="Human" onChange={handleSpecies}></input>
+<input type="radio" value="Human" name="Species" id="Human" onChange={handleSpecies} checked={props.filterBySpecies === 'Human'}></input>
 <label htmlFor="Alien">Alien</label>
-<input type="radio" value="Alien" name="Species" id="Alien" onChange={handleSpecies}  ></input>
+<input type="radio" value="Alien" name="Species" id="Alien" onChange={handleSpecies} checked={props.filterBySpecies === 'Alien'}></input>
 </>
 );
 };
