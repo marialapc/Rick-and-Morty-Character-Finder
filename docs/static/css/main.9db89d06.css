@@ -1,0 +1,2 @@
+:root{box-sizing:border-box;margin:0;padding:0}.header{align-items:center;display:flex;height:400px;justify-content:center;width:100vw}.header__logo{margin-bottom:100px;width:500px}.main{align-items:center;display:flex;flex-direction:column;justify-content:center;width:100vw}.characterList{grid-gap:10px;display:grid;grid-template-columns:repeat(4,1fr)}
+/*# sourceMappingURL=main.9db89d06.css.map*/
