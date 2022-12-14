@@ -1,0 +1,21 @@
+
+.reset-btn{
+    color: white;
+  background-color:grey;
+  font-size: 12px;
+  border-radius: 5px;
+  height: 27px;
+  width: 55px;
+  margin-bottom: 40px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  cursor: pointer;
+  margin-left: 500px;
+ 
+}
+.reset-btn:hover {
+  color: white;
+  background-color:rgb(74, 201, 131);
+  transition: width 0.6s;
+  cursor: pointer;
+}
+

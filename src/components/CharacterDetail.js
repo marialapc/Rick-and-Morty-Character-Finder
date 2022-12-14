@@ -1,3 +1,4 @@
+import '../styles/components/CharacterDetail.scss';
 import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import NotFound from "./NotFound";
@@ -9,7 +10,7 @@ const CharacterDetail = (props) =>{
         return <NotFound />
     } else {
     return(
-        <article>
+        <article className="detail-article">
             <img
         src={character.image}
         alt={`Imagen de ${character.name}`}

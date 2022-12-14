@@ -1,3 +1,4 @@
+import '../styles/components/FilterBySpecies.scss';
 const FilterBySpecies =  (props) => {
 
     const handleSpecies = (ev) =>{

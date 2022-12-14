@@ -64,15 +64,15 @@ function App() {
             path="/"
             element={
               <>
+                  <ResetButton
+                  setFilterByName={setFilterByName}
+                  setFilterBySpecies={setFilterBySpecies}
+                />
                 <Filters
                   filterByName={filterByName}
                   handleFilterName={handleFilterName}
                   filterBySpecies={filterBySpecies}
                   handleFilterSpecies={handleFilterSpecies}
-                />
-                <ResetButton
-                  setFilterByName={setFilterByName}
-                  setFilterBySpecies={setFilterBySpecies}
                 />
                 <CharacterList
                   characters={filteredCharacters}

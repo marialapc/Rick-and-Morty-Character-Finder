@@ -1,3 +1,5 @@
+import '../styles/components/ResetButton.scss';
+
 const ResetButton = (props) => {
 
   const handleReset = (ev) =>{
@@ -8,6 +10,6 @@ const ResetButton = (props) => {
     }
 
     return(
-         <button onClick={handleReset}>reset</button>
+         <button onClick={handleReset} className="reset-btn">Reset</button>
     );};
 export default ResetButton;

@@ -1,10 +1,12 @@
+import '../styles/components/FilterByName.scss';
+
 const FilterByName = (props) => {
   const handleInput = (ev) => {
     props.handleFilterName(ev.target.value);
   };
 
   return (
-    <input
+    <input className="FilterByName"
       onInput={handleInput}
       value={props.filterByName}
       type="text"
