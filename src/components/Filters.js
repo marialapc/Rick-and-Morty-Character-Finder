@@ -1,3 +1,4 @@
+import '../styles/components/Filters.scss';
 import FilterByName from "./FilterByName";
 import FilterBySpecies from "./FilterBySpecies";
 
@@ -7,7 +8,7 @@ const Filters = (props) => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="filters">
       <FilterByName
         filterByName={props.filterByName}
         handleFilterName={props.handleFilterName}
