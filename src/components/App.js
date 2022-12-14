@@ -8,12 +8,13 @@ import CharacterDetail from "./CharacterDetail";
 import ls from "../services/localStorage";
 import logo from"../images/logo.png";
 import FilterBySpecies from "./FilterBySpecies";
+import ResetButton from "./ResetButton";
 
 function App() {
   // variables estado
   const [characterData, setCharacterData] = useState([]);
   const [filterByName, setFilterByName] = useState(ls.get('filterByName'), '');
-  const [filterBySpecies, setFilterBySpecies] = useState(ls.get('filterBySpecies'),'');
+  const [filterBySpecies, setFilterBySpecies] = useState('');
 
   // useEffect
 
@@ -32,7 +33,6 @@ function App() {
 
   const handleFilterSpecies = (value) => {
     setFilterBySpecies(value);
-    ls.set('filterBySpecies',value)
   };
 
   // funciones render
@@ -64,7 +64,7 @@ function App() {
             <>
              <Filters filterByName={filterByName} handleFilterName={handleFilterName}
                      filterBySpecies={filterBySpecies}  handleFilterSpecies={handleFilterSpecies}/>
-                     
+                     <ResetButton setFilterByName={setFilterByName} setFilterBySpecies={setFilterBySpecies} />
              <CharacterList characters={filteredCharacters} filterByName={filterByName} species={selectedSpecies} filterBySpecies={filterBySpecies}/>
             </>
           }>

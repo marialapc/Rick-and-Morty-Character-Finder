@@ -8,7 +8,7 @@ return(
 <label htmlFor="Human">Human</label>
 <input type="radio" value="Human" name="Species" id="Human" onChange={handleSpecies}></input>
 <label htmlFor="Alien">Alien</label>
-<input type="radio" value="Alien" name="Species" id="Alien" onChange={handleSpecies}></input>
+<input type="radio" value="Alien" name="Species" id="Alien" onChange={handleSpecies}  ></input>
 </>
 );
 };
