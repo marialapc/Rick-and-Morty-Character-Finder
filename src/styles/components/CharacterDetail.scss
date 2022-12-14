@@ -1,3 +1,51 @@
 .detail-article{
-    background-color: blue;
+    width: 700px;
+    height: 300px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:space-between;
+
+
+    &__img{
+     height: 300px;
+    }
+    
+    &__info{
+        width: 400px;
+        height: 300px;
+        margin: 0px;
+        display: flex;
+        flex-direction: column;
+        background-color: rgb(47, 179, 255);
+        padding-left: 30px;
+        color: white;
+ font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+};
+.returnBtN{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  text-decoration: none;
+  color: white;
+  background-color:grey;
+  font-size: 12px;
+  border-radius: 5px;
+  height: 27px;
+  width: 55px;
+  margin-bottom: 40px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  cursor: pointer;
+  margin-left: 500px;
+ 
 }
+
+.returnBtN:hover{
+        color: white;
+        background-color:rgb(74, 201, 131);
+        transition: width 0.6s;
+        cursor: pointer;
+      
+}
+

@@ -10,20 +10,24 @@ const CharacterDetail = (props) =>{
         return <NotFound />
     } else {
     return(
+        <>
+        <Link to ={"/"} className="returnBtN"> Return </Link>
         <article className="detail-article">
-            <img
+            <img className='detail-article__img'
         src={character.image}
         alt={`Imagen de ${character.name}`}
         title={`Imagen de ${character.name}`}
       />
-      <h4>{character.name}</h4>
+       <section className='detail-article__info'>
+       <h4 className='detail-article__info--name'>{character.name}</h4>
       <p>Status: {character.status}</p>
       <p> Species: {character.species}</p>
       <p> Origin: {character.planet}</p>
       <p> Episodes: {character.episodes.length}</p>
+      </section>
      
-      <Link to ={"/"}> Volver </Link>
         </article>
+         </>
     )
     };
 }
