@@ -12,7 +12,9 @@ const Filters = (props) => {
         filterByName={props.filterByName}
         handleFilterName={props.handleFilterName}
       />
-      <FilterBySpecies />
+      <FilterBySpecies
+           filterBySpecies={props.filterBySpecies}
+           handleFilterSpecies={props.handleFilterSpecies} />
     </form>
   );
 };

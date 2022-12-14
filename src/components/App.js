@@ -7,11 +7,13 @@ import Filters from "./Filters";
 import CharacterDetail from "./CharacterDetail";
 import ls from "../services/localStorage";
 import logo from"../images/logo.png";
+import FilterBySpecies from "./FilterBySpecies";
 
 function App() {
   // variables estado
   const [characterData, setCharacterData] = useState([]);
   const [filterByName, setFilterByName] = useState(ls.get('filterByName'), '');
+  const [filterBySpecies, setFilterBySpecies] = useState(ls.get('filterBySpecies'),'');
 
   // useEffect
 
@@ -28,6 +30,11 @@ function App() {
     ls.set('filterByName', value)
   };
 
+  const handleFilterSpecies = (value) => {
+    setFilterBySpecies(value);
+    ls.set('filterBySpecies',value)
+  };
+
   // funciones render
 
   const filteredCharacters = characterData.filter((character) =>
@@ -40,6 +47,9 @@ function App() {
     return characterData.find((character) => character.id === parseInt(id));
    };
   
+   const selectedSpecies = characterData.filter((character) =>
+    character.species.includes(FilterBySpecies)
+  );
 
   //return
 
@@ -52,8 +62,10 @@ function App() {
         <Routes>
           <Route path="/" element={
             <>
-             <Filters filterByName={filterByName} handleFilterName={handleFilterName} />
-             <CharacterList characters={filteredCharacters} filterByName={filterByName}  />
+             <Filters filterByName={filterByName} handleFilterName={handleFilterName}
+                     filterBySpecies={filterBySpecies}  handleFilterSpecies={handleFilterSpecies}/>
+                     
+             <CharacterList characters={filteredCharacters} filterByName={filterByName} species={selectedSpecies} filterBySpecies={filterBySpecies}/>
             </>
           }>
          </Route>
