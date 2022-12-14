@@ -11,8 +11,8 @@ const CharacterCard = (props) => {
         alt={`Imagen de ${props.character.name}`}
         title={`Imagen de ${props.character.name}`}
       />
-      <h4>{props.character.name}</h4>
-      <p>{props.character.species}</p>
+      <h4 className='characterCard__name'>{props.character.name}</h4>
+      <p className='characterCard__species'>{props.character.species}</p>
       </Link>
     </li>
 
