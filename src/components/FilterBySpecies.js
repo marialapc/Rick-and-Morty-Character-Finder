@@ -11,9 +11,9 @@ const FilterBySpecies =  (props) => {
 return(
     <>
 <img src={human} alt="human" title="human" className="human"></img>
-<input type="radio" value="Human" name="Species" id="Human" onChange={handleSpecies} checked={props.filterBySpecies === 'Human'}></input>
-<img src={ovni} alt="ovni" title="ovni" className="ovni"></img>
-<input type="radio" value="Alien" name="Species" id="Alien" onChange={handleSpecies} checked={props.filterBySpecies === 'Alien'}></input>
+<input type="radio" value="Human" name="Species" id="Human" className='inputHuman' onChange={handleSpecies} checked={props.filterBySpecies === 'Human'}></input>
+<img src={ovni} alt="alien" title="alien" className="ovni"></img>
+<input type="radio" value="Alien" name="Species" id="Alien" className='inputAlien'onChange={handleSpecies} checked={props.filterBySpecies === 'Alien'}></input>
 </>
 );
 };

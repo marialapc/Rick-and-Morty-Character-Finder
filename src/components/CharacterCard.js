@@ -1,7 +1,18 @@
 import '../styles/components/CharacterCard.scss';
 import { Link } from "react-router-dom";
+import  human from "../images/human.png";
+import  ovni from "../images/ovni.png";
 
 const CharacterCard = (props) => {
+  
+  const species = () =>{
+    if (props.character.species === "Human"){
+      return human;
+    }else{
+      return ovni;
+    }
+  }
+  
   return (
 
         <li className='characterCard'>
@@ -12,7 +23,7 @@ const CharacterCard = (props) => {
         title={`Imagen de ${props.character.name}`}
       />
       <h4 className='characterCard__name'>{props.character.name}</h4>
-      <p className='characterCard__species'>{props.character.species}</p>
+      <img src={`${species()}`} alt="species" className='icon'></img>
       </Link>
     </li>
 
