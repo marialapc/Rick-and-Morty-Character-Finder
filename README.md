@@ -4,7 +4,7 @@ Ejercicio de la evaluación final del módulo de React del bootcamp de Adalab
 
 ## ¿Qué encontrarás en este repo? 🚀
 
-Album de personajes de la serie rick&Morty
+Album de personajes de la serie Rick&Morty
 
 ## ¿Cómo funciona? ⚙️
 
