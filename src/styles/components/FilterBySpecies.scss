@@ -1,4 +1,17 @@
 .human{
+    height: 35px;
+    cursor: pointer;
+    margin-left: 20px;
+}
+.ovni{
+   height: 35px;
+   margin-left: 20px;
+   cursor: pointer;
+  
+}
+
+@media all and (min-width: 1200px) {
+.human{
     height: 50px;
     cursor: pointer;
 }
@@ -9,3 +22,4 @@
   
 }
 
+}

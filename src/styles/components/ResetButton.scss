@@ -1,21 +1,41 @@
 
 .reset-btn{
+  color: white;
+background-color:grey;
+font-size: 10px;
+border-radius: 5px;
+height: 20px;
+width: 40px;
+margin-top: 10px;
+margin-bottom: 17px;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+cursor: pointer;
+margin-left: 175px;
+
+}
+.reset-btn:hover {
+color: white;
+background-color:rgb(74, 201, 131);
+transition: width 0.6s;
+cursor: pointer;
+}
+
+
+@media all and (min-width: 1200px) {
+
+
+.reset-btn{
     color: white;
   background-color:grey;
   font-size: 12px;
   border-radius: 5px;
   height: 27px;
   width: 55px;
-  margin-bottom: 40px;
+  margin-bottom: 45px;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   cursor: pointer;
-  margin-left: 500px;
+  margin-left: 620px;
  
 }
-.reset-btn:hover {
-  color: white;
-  background-color:rgb(74, 201, 131);
-  transition: width 0.6s;
-  cursor: pointer;
-}
 
+}

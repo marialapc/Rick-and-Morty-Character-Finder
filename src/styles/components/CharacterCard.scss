@@ -12,6 +12,38 @@
   }
 
   &__img {
+    width: 70px;
+  }
+  &__name{
+    font-size:10px ;
+  color: white;
+ font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+ margin: 0px;
+ margin-top: 10px;
+  }
+}
+
+.icon{
+  width: 20px;
+  margin-top: 3px;
+  margin-bottom: 5px;
+  margin-left: 40px;
+}
+
+
+@media all and (min-width: 1200px) {
+.characterCard {
+  background-color: rgb(47, 179, 255);
+  &__link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    
+  }
+
+  &__img {
     width: 200px;
   }
   &__name{
@@ -29,4 +61,4 @@
   margin-left: 140px;
 }
 
-
+}
