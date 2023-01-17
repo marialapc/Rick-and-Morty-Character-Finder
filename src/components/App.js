@@ -6,7 +6,7 @@ import CharacterList from "./CharacterList";
 import Filters from "./Filters";
 import CharacterDetail from "./CharacterDetail";
 import ls from "../services/localStorage";
-import logo from "../images/logo.png";
+import logo from "../images/logo2.png";
 import FilterBySpecies from "./FilterBySpecies";
 import ResetButton from "./ResetButton";
 

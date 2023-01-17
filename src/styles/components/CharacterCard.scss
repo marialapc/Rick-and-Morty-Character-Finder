@@ -2,7 +2,7 @@
 
 .characterCard {
   background-color: rgb(47, 179, 255);
-  width: 70px;
+  width: 80px;
   &__link {
     display: flex;
     flex-direction: column;
@@ -13,7 +13,7 @@
   }
 
   &__img {
-    width: 70px;
+    width: 80px;
   }
   &__name{
     font-size:10px ;
