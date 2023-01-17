@@ -20,10 +20,10 @@ const CharacterDetail = (props) =>{
       />
        <section className='detail-article__info'>
        <h4 className='detail-article__info--name'>{character.name}</h4>
-      <p>Status: {character.status}</p>
-      <p> Species: {character.species}</p>
-      <p> Origin: {character.planet}</p>
-      <p> Episodes: {character.episodes.length}</p>
+      <p className='detail-article__info--name'>Status: {character.status}</p>
+      <p className='detail-article__info--name'> Species: {character.species}</p>
+      <p className='detail-article__info--name'> Origin: {character.planet}</p>
+      <p className='detail-article__info--name'> Episodes: {character.episodes.length}</p>
       </section>
      
         </article>
