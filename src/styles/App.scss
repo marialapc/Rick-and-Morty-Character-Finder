@@ -3,7 +3,8 @@
 .body {
  
   background: black;
-  background: radial-gradient(circle, rgba(0,0,0,1) 78%, rgba(1,61,45,1) 100%);
+  background: radial-gradient(circle, rgba(0,0,0,1) 83%, rgba(1,61,45,1) 100%);
+
 }
 
 .header {
@@ -13,8 +14,8 @@
   justify-content: center;
 
   &__logo {
-    margin-top: 50px;
-    width: 285px;
+    margin-top: 40px;
+    width: 315px;
   }
 }
 
@@ -29,7 +30,9 @@
 
 
 @media all and (min-width: 1200px) {
-  
+  .body{
+    background: radial-gradient(circle, rgba(0,0,0,1) 78%, rgba(1,61,45,1) 100%);
+  }
 
 .header {
   width: 100%;
