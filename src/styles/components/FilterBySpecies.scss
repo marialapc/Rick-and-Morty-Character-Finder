@@ -1,26 +1,20 @@
-.human{
-    height: 35px;
-    cursor: pointer;
-    margin-left: 140px;
+.human {
+  height: 35px;
+  cursor: pointer;
+  margin-left: 140px;
 }
-.ovni{
-   height: 35px;
-   margin-left: 20px;
-   cursor: pointer;
-  
+.ovni {
+  height: 35px;
+  margin-left: 20px;
+  cursor: pointer;
 }
 
 @media all and (min-width: 1200px) {
-.human{
+  .human {
     height: 50px;
-    cursor: pointer;
     margin-left: 15px;
-}
-.ovni{
-   height: 50px;
-   margin-left: 20px;
-   cursor: pointer;
-  
-}
-
+  }
+  .ovni {
+    height: 50px;
+  }
 }
