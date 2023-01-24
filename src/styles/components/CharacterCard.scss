@@ -2,7 +2,7 @@
 
 .characterCard {
   background-color: rgb(47, 179, 255);
-  width: 5.7em;
+  width: 6em;
   &__link {
     display: flex;
     flex-direction: column;
@@ -11,7 +11,7 @@
     text-decoration: none;
   }
   &__img {
-    width: 5.7em;
+    width: 6em;
   }
   &__name {
     font-size: 0.625em;
