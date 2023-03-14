@@ -23,6 +23,10 @@ cursor: pointer;
 
 
 .reset-btn{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   font-size: 0.75em;
   height: 1.688em;
   width: 3.438em;
