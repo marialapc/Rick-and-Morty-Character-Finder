@@ -29,6 +29,9 @@
   margin-bottom:0.313em;
   margin-left: 2.5em;
 }
+.characterCard:hover{
+  background-color: rgb(38, 231, 144);
+}
 
 @media all and (min-width: 1200px) {
   .characterCard {
